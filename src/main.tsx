@@ -5,7 +5,6 @@ import zhCN from 'antd/locale/zh_CN'
 import App from './App'
 import 'antd/dist/reset.css'
 import 'virtual:uno.css'
-import './styles/responsive.css'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
