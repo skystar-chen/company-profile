@@ -4,6 +4,9 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+overrides:
+  '@oxc-parser/binding-win32-x64-msvc': npm:@oxc-parser/binding-linux-x64-gnu@^0.124.0
+
 importers:
 
   .:
@@ -34,8 +37,8 @@ importers:
         version: 5.0.12(@types/react@19.2.14)(react@19.2.5)
     devDependencies:
       '@oxc-parser/binding-win32-x64-msvc':
-        specifier: ^0.128.0
-        version: 0.128.0
+        specifier: npm:@oxc-parser/binding-linux-x64-gnu@^0.124.0
+        version: '@oxc-parser/binding-linux-x64-gnu@0.124.0'
       '@types/lodash-es':
         specifier: ^4.17.12
         version: 4.17.12
@@ -240,6 +243,7 @@ packages:
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [x64]
     os: [linux]
+    libc: [glibc]
 
   '@oxc-parser/binding-linux-x64-musl@0.124.0':
     resolution: {integrity: sha512-asVYN0qmSHlCU8H9Q47SmeJ/Z5EG4IWCC+QGxkfFboI5qh15aLlJnHmnrV61MwQRPXGnVC/sC3qKhrUyqGxUqw==}
@@ -268,17 +272,6 @@ packages:
     resolution: {integrity: sha512-sib5xC0nz/+SCpaETBuHBz4SXS02KuG5HtyOcHsO/SK5ZvLRGhOZx0elDKawjb6adFkD7dQCqpXUS25wY6ELKQ==}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [ia32]
-    os: [win32]
-
-  '@oxc-parser/binding-win32-x64-msvc@0.124.0':
-    resolution: {integrity: sha512-UgojtjGUgZgAZQYt7SC6VO65OVdxEkRe2q+2vbHJO//18qw3Hrk6UvHGQKldsQKgbVcIBT/YBrt85YberiYIPQ==}
-    engines: {node: ^20.19.0 || >=22.12.0}
-    cpu: [x64]
-    os: [win32]
-
-  '@oxc-parser/binding-win32-x64-msvc@0.128.0':
-    resolution: {integrity: sha512-NE9ny+cPUCCObXa0IKLfj0tCdPd7pe/dz9ZpkxpUOymB3miNeMPybdlYYTBSGJUalMWeBM85/4JcCErCNTqOXw==}
-    engines: {node: ^20.19.0 || >=22.12.0}
     os: [win32]
 
   '@oxc-project/types@0.124.0':
@@ -1410,8 +1403,7 @@ snapshots:
   '@oxc-parser/binding-linux-s390x-gnu@0.124.0':
     optional: true
 
-  '@oxc-parser/binding-linux-x64-gnu@0.124.0':
-    optional: true
+  '@oxc-parser/binding-linux-x64-gnu@0.124.0': {}
 
   '@oxc-parser/binding-linux-x64-musl@0.124.0':
     optional: true
@@ -1432,11 +1424,6 @@ snapshots:
 
   '@oxc-parser/binding-win32-ia32-msvc@0.124.0':
     optional: true
-
-  '@oxc-parser/binding-win32-x64-msvc@0.124.0':
-    optional: true
-
-  '@oxc-parser/binding-win32-x64-msvc@0.128.0': {}
 
   '@oxc-project/types@0.124.0': {}
 
@@ -2278,7 +2265,7 @@ snapshots:
       '@oxc-parser/binding-wasm32-wasi': 0.124.0(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)
       '@oxc-parser/binding-win32-arm64-msvc': 0.124.0
       '@oxc-parser/binding-win32-ia32-msvc': 0.124.0
-      '@oxc-parser/binding-win32-x64-msvc': 0.124.0
+      '@oxc-parser/binding-win32-x64-msvc': '@oxc-parser/binding-linux-x64-gnu@0.124.0'
     transitivePeerDependencies:
       - '@emnapi/core'
       - '@emnapi/runtime'
