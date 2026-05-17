@@ -1,5 +1,6 @@
 import { Divider } from 'antd'
 import { EnvironmentOutlined, MailOutlined, PhoneOutlined } from '@ant-design/icons'
+import policeLogo from '@/assets/police_logo.png'
 
 const quickLinks = [
   { href: '#about', label: '关于我们' },
@@ -59,11 +60,11 @@ const Footer = () => (
             </div>
             <div className="flex items-center gap-2.5 text-sm">
               <MailOutlined className="text-slate-500" />
-              <span>contact@company.com</span>
+              <span>18296712438@163.com</span>
             </div>
             <div className="flex items-center gap-2.5 text-sm">
               <PhoneOutlined className="text-slate-500" />
-              <span>400-123-4567</span>
+              <span>xxx-xxxx-xxxx</span>
             </div>
           </div>
         </div>
@@ -72,7 +73,20 @@ const Footer = () => (
       <Divider className="!border-slate-800" />
 
       <div className="text-center text-sm text-slate-500">
-        &copy; 2026 Company Profile. All rights reserved.
+        Copyright &copy; 2026 - 2027 Company Profile. All rights reserved.
+      </div>
+
+      <div className="text-center text-sm text-slate-500 mt-2">
+        星星之火{' '}
+        <a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank" rel="noreferrer" className="text-slate-500 hover:text-white transition-colors duration-200">
+          赣ICP备2026009725号-1
+        </a>
+        {' '}
+        <img src={policeLogo} alt="公安备案" className="inline-block h-4 align-middle" />
+        {' '}
+        <a href="https://beian.mps.gov.cn/#/query/webSearch?code=xxx" target="_blank" rel="noreferrer" className="text-slate-500 hover:text-white transition-colors duration-200">
+          审核中
+        </a>
       </div>
     </div>
   </footer>
