@@ -84,8 +84,8 @@ const Footer = () => (
         {' '}
         <img src={policeLogo} alt="公安备案" className="inline-block h-4 align-middle" />
         {' '}
-        <a href="https://beian.mps.gov.cn/#/query/webSearch?code=xxx" target="_blank" rel="noreferrer" className="text-slate-500 hover:text-white transition-colors duration-200">
-          审核中
+        <a href="https://beian.mps.gov.cn/#/query/webSearch?code=36073202360998" target="_blank" rel="noreferrer" className="text-slate-500 hover:text-white transition-colors duration-200">
+          赣公网安备36073202360998号
         </a>
       </div>
     </div>
